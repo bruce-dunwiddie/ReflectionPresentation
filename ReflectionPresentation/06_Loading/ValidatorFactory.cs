@@ -25,7 +25,7 @@ namespace ReflectionPresentation.Loading
             Assembly assembly = Assembly.LoadFrom(
                 pathToAssembly);
 
-            // since custom assembly is referencing this assembly
+            // since custom assembly is referencing our assembly for the IValidator definition
             // we can check for equality on IValidator directly
 
             // making the assumption that there is only a single implementation

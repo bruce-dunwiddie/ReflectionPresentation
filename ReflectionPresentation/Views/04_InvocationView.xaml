@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="ReflectionPresentation.Views.InvocationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ViewModels="clr-namespace:ReflectionPresentation.ViewModels"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+  <UserControl.DataContext>
+    <ViewModels:InvocationViewModel/>
+  </UserControl.DataContext>
+  <DockPanel>
+    <StackPanel>
+      <Button Command="{Binding InvokeDirect, Mode=OneWay}">
+        Direct
+      </Button>
+      <Button Command="{Binding InvokeInterface, Mode=OneWay}">
+        Interface
+      </Button>
+      <Button Command="{Binding InvokeMethodInfo, Mode=OneWay}">
+        Invoke
+      </Button>
+      <Button Command="{Binding InvokeCachedMethodInfo, Mode=OneWay}">
+        Cached Invoke
+      </Button>
+      <Button Command="{Binding InvokeDelegate, Mode=OneWay}">
+        Delegate
+      </Button>
+      <Button Command="{Binding InvokeFunc, Mode=OneWay}">
+        Func
+      </Button>
+      <Button Command="{Binding InvokeExpression, Mode=OneWay}">
+        Expression
+      </Button>
+      <Button Command="{Binding InvokeCustomExpression, Mode=OneWay}">
+        Custom Expression
+      </Button>
+      <Button Command="{Binding InvokeDynamic, Mode=OneWay}">
+        dynamic
+      </Button>
+    </StackPanel>
+    <TextBox Text="{Binding Text}"/>
+  </DockPanel>
+</UserControl>

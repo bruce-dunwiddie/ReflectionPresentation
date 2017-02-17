@@ -1,0 +1,26 @@
+﻿<Window x:Class="ReflectionPresentation.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Views="clr-namespace:ReflectionPresentation.Views"
+        Title="Reflection Presentation" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+  <TabControl>
+    <TabItem Header="Types">
+      <Views:TypesView/>
+    </TabItem>
+    <TabItem Header="Introspection">
+      <Views:IntrospectionView/>
+    </TabItem>
+    <TabItem Header="Manipulation">
+      <Views:ManipulationView/>
+    </TabItem>
+    <TabItem Header="Invocation">
+      <Views:InvocationView/>
+    </TabItem>
+    <TabItem Header="Instantiation">
+      <Views:InstantiationView/>
+    </TabItem>
+    <TabItem Header="Loading">
+      <Views:LoadingView/>
+    </TabItem>
+  </TabControl>
+</Window>

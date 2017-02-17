@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="ReflectionPresentation.Views.IntrospectionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ViewModels="clr-namespace:ReflectionPresentation.ViewModels"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+  <UserControl.DataContext>
+    <ViewModels:IntrospectionViewModel/>
+  </UserControl.DataContext>
+  <DockPanel>
+    <StackPanel>
+      <Button Command="{Binding DisplayType, Mode=OneWay}">
+        Type
+      </Button>
+      <Button Command="{Binding DisplayFields, Mode=OneWay}">
+        Fields
+      </Button>
+      <Button Command="{Binding DisplayProperties, Mode=OneWay}">
+        Properties
+      </Button>
+      <Button Command="{Binding DisplayMethods, Mode=OneWay}">
+        Methods
+      </Button>
+      <Button Command="{Binding DisplayConstructors, Mode=OneWay}">
+        Constructors
+      </Button>
+      <Button Command="{Binding DisplayAssembly, Mode=OneWay}">
+        Assembly
+      </Button>
+    </StackPanel>
+    <TextBox Text="{Binding Text}"/>
+  </DockPanel>
+</UserControl>

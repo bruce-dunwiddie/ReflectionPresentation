@@ -13,11 +13,11 @@
     <TabItem Header="Manipulation">
       <Views:ManipulationView/>
     </TabItem>
-    <TabItem Header="Invocation">
-      <Views:InvocationView/>
-    </TabItem>
     <TabItem Header="Instantiation">
       <Views:InstantiationView/>
+    </TabItem>
+    <TabItem Header="Invocation">
+      <Views:InvocationView/>
     </TabItem>
     <TabItem Header="Loading">
       <Views:LoadingView/>
